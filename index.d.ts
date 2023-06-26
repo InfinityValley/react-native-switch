@@ -1,6 +1,6 @@
-declare module 'react-native-switch' {
-  import { Component, ReactNode } from 'react';
-  import { StyleProp, TextStyle, ViewStyle } from 'react-native';
+declare module "react-native-switch" {
+  import { Component, ReactNode } from "react";
+  import { StyleProp, TextStyle, ViewStyle } from "react-native";
 
   export interface SwitchProps {
     onValueChange?: (value: boolean) => void;
@@ -21,6 +21,7 @@ declare module 'react-native-switch' {
     barHeight?: number;
     circleBorderWidth?: number;
     renderInsideCircle?: () => ReactNode;
+    renderLeftIcon?: () => ReactNode;
     changeValueImmediately?: boolean;
     innerCircleStyle?: StyleProp<ViewStyle>;
     outerCircleStyle?: StyleProp<ViewStyle>;
@@ -31,6 +32,7 @@ declare module 'react-native-switch' {
     switchWidthMultiplier?: number;
     switchBorderRadius?: number;
     testID?: string;
+    renderRightIcon?: () => ReactNode;
   }
 
   export class Switch extends Component<SwitchProps> {}
